@@ -16,7 +16,12 @@ unsigned int factorial (unsigned int n){
 }
 
 double power (double base, unsigned int n){
-
+    double result = base;
+    if(n == 0) return 1;
+    for(unsigned int i = n - 1; i > 0; i--){
+        result *= base;
+    }
+    return result;
 }
 unsigned int fibonacci (unsigned int n){
 	
