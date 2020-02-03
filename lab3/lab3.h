@@ -10,10 +10,6 @@ class DList {
 			data_ = data;
 			next_ = next;
 			prev_ = prev;
-			if (prev)
-			{
-				prev->next_ = this;
-			}
 		}
 	};
 	Node* front_;
@@ -49,11 +45,14 @@ void DList<T>::push_front(const T& data) {
 template <typename T>
 void DList<T>::push_back(const T& data) {
 	Node* n = new Node(data, nullptr, back_);
-	if (!back_)
+	if (back_)
 	{
-		back_ = n;
+		back_->next_ = n;
+	}
+	else {
 		front_ = n;
 	}
+	back_ = n;
 }
 
 
