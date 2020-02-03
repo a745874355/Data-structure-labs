@@ -15,7 +15,7 @@ double power (double base, unsigned int n);
 unsigned int fibonacci (unsigned int n);
 
 int main(void){
-	unsigned int n = 35;
+	unsigned int n = 20;
 	unsigned int rc;
 	Timer t;
 	t.start();
