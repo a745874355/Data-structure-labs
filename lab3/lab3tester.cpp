@@ -17,9 +17,7 @@ int main(void){
 
 	for(int i=0;i<3;i++){
 		regular.push_front(i);
-		regular.print();       //0
-		                       //1 0
-							   //2 1 0
+		regular.print();
 	}
 	regular.reversePrint();
 
