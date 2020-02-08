@@ -59,7 +59,7 @@ public:
 			return operator--();
 		}
 		bool operator==(const_iterator rhs) {
-			return this->data == rhs.data;	
+			return this->data == rhs.data;
 		}
 		bool operator!=(const_iterator rhs) {
 			return !operator==(rhs);
@@ -71,20 +71,22 @@ public:
 	class iterator :public const_iterator {
 	public:
 		iterator() : const_iterator() {}
-		iterator(Node* node) :const_iterator(node) {		}
+		iterator(Node* node) :const_iterator(node) {}
 		iterator operator++() {
 			const_iterator::operator++();
 			return *this;
 		}
 		iterator operator++(int) {
-			return operator++();
-		}	
+			operator++();
+			return *this;
+		}
 		iterator operator--() {
 			const_iterator::operator--();
 			return *this;
 		}
 		iterator operator--(int) {
-			return operator--();
+			operator--();
+			return *this;
 		}
 		T& operator*() {
 			return const_iterator::data->data_;
@@ -182,7 +184,8 @@ public:
 			return *this;
 		}
 		const_iterator operator++(int) {
-			return operator++();
+			operator++();
+			return *this;
 		}
 		const_iterator operator--() {
 			if (this->data->prev_)
@@ -192,10 +195,22 @@ public:
 			return *this;
 		}
 		const_iterator operator--(int) {
-			return operator--();
+			operator--();
+			return *this;
 		}
 		bool operator==(const_iterator rhs) {
-			if (!(this->data->next_->next_)) return false;
+			if (!rhs.data->next_) //if rhs is last sentinel
+			{
+				if (!this->data->prev_) //if this is first sentinel
+				{
+					if (this->data->next_ == rhs.data) //if there is no data between 2 sentinels
+					{
+						return true;
+					}
+				}
+			}
+
+
 			return this->data == rhs.data;
 		}
 		bool operator!=(const_iterator rhs) {
@@ -208,7 +223,7 @@ public:
 	class iterator :public const_iterator {
 	public:
 		iterator() :const_iterator() {}
-		iterator(Node* node) : const_iterator(node){}
+		iterator(Node* node) : const_iterator(node) {}
 		iterator(Node* node, Sentinel* list) : const_iterator(node, list) {}
 		iterator(const_iterator& it) {
 			const_iterator::data = it.data;
