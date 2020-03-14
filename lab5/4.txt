@@ -1,0 +1,35 @@
+random : 0.0682822
+sorted : 0.0484896
+reversed : 0.0592055
+organpipe : 0.0629747
+rotated : 0.0693547
+
+
+random : 0.0680697
+sorted : 0.0485459
+reversed : 0.0594421
+organpipe : 0.0633504
+rotated : 0.0708001
+
+
+random : 0.0712631
+sorted : 0.0485319
+reversed : 0.0594763
+organpipe : 0.0622533
+rotated : 0.0694518
+
+
+random : 0.0719472
+sorted : 0.0614183
+reversed : 0.0603646
+organpipe : 0.0622244
+rotated : 0.06882
+
+
+random : 0.0685485
+sorted : 0.0603016
+reversed : 0.0615478
+organpipe : 0.0629956
+rotated : 0.0692312
+
+

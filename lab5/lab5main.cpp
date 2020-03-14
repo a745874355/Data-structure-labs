@@ -63,7 +63,7 @@ int main(int argc, char* argv[]){
 
 
    }
-
+   std::cout << std::endl << std::endl;
    return 0;
 }
 void printArray(int array[],int size){

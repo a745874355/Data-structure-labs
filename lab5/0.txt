@@ -1,0 +1,10 @@
+choose your pivot picking algorithm
+Usage: a.out <array size> <pivot picking: 1-last, 2-middle, 3-medianOf3, 4-random
+choose your pivot picking algorithm
+Usage: a.out <array size> <pivot picking: 1-last, 2-middle, 3-medianOf3, 4-random
+choose your pivot picking algorithm
+Usage: a.out <array size> <pivot picking: 1-last, 2-middle, 3-medianOf3, 4-random
+choose your pivot picking algorithm
+Usage: a.out <array size> <pivot picking: 1-last, 2-middle, 3-medianOf3, 4-random
+choose your pivot picking algorithm
+Usage: a.out <array size> <pivot picking: 1-last, 2-middle, 3-medianOf3, 4-random
